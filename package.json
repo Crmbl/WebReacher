@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-typescript-starter",
+  "name": "webreacher",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
+  "description": "Chrome Extension for SSH use",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+    "url": "https://github.com/Crmbl/WebReacher.git"
   },
   "dependencies": {
     "jquery": "~3.3.1",
