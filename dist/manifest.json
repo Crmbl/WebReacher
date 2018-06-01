@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "name": "WebReacher",
+  "description": "Chrome Extension for SSH use",
   "version": "1.0",
 
   "options_ui": {
@@ -11,19 +11,20 @@
   },
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "icon.png"
   },
 
   "content_scripts": [
       {
           "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
+          "js": ["js/vendor.js", "js/content_script.js"],
+          "css": ["css/global.css"]
       }
   ],
 
   "background": {
-    "scripts": ["js/vendor.js", "js/background.js"]
+    "scripts": ["js/vendor.js", "js/background.js"],
+    "persistent": true
   },
 
   "permissions": [
