@@ -2,6 +2,12 @@
   "manifest_version": 2,
 
   "name": "WebReacher",
+  "icons":
+   {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
   "description": "Chrome Extension for SSH use",
   "version": "1.0",
 
