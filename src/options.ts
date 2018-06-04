@@ -1,6 +1,5 @@
 function save_options() {
   var link = <HTMLInputElement> document.getElementById('webreacher-link');
-  console.log(link.value);
 
   chrome.storage.sync.set({
     'link': link.value

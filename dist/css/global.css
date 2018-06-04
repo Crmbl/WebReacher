@@ -1,11 +1,15 @@
 #webreacher-ssh {
-    position: absolute !important;
+    position: fixed !important;
     width: 650px !important;
     height: 400px;
     opacity: 1 !important;
     z-index: 9001 !important;
     top: 0px !important;
-    background-color: transparent !important;
+    background-color: black !important;
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    transition: height 0.5s ease-out;
+    padding: 5px;
 }
 
 #webreacher-ssh-handler {
@@ -19,9 +23,10 @@
     cursor: pointer !important;
     padding: 0 !important;
     margin: 0 !important;
+    margin-left: -5px !important;
     border-bottom-left-radius: 8px !important;
     border-bottom-right-radius: 8px !important;
-    transition: top 0.5s ease-in;
+    transition: top 0.5s ease-out;
 }
 
 #webreacher-ssh-handler-separator {
@@ -38,12 +43,12 @@
 
 #webreacher-ssh-iframe {
     position: fixed !important;
-    width: 650px !important;
-    height: 0px;
-    max-height: 375px !important;
+    top: 5px;
+    width: 640px !important;
+    height: 365px !important;
     z-index: 9002 !important;
     padding: 0 !important;
     margin: 0 !important;
     border: 0 !important;
-    transition: height 0.5s ease-in;
+    transition: top 0.5s ease-out;
 }
