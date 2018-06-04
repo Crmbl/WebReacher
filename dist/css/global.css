@@ -1,40 +1,49 @@
 #webreacher-ssh {
-    position: absolute;
-    width: 600px;
+    position: absolute !important;
+    width: 650px !important;
     height: 400px;
-    opacity: 1;
-    z-index: 9001;
-    border-radius: 8px;
-    background-color: transparent;
+    opacity: 1 !important;
+    z-index: 9001 !important;
+    top: 0px !important;
+    background-color: transparent !important;
 }
 
 #webreacher-ssh-handler {
-    position: relative;
-    background-color: black;
-    width: 600px;
-    height: 25px;
-    opacity: 1;
-    z-index: 9002;
-    cursor: move;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    position: fixed !important;
+    top: 375px;
+    background-color: black !important;
+    width: 650px !important;
+    height: 25px !important;
+    opacity: 1 !important;
+    z-index: 9002 !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    transition: top 0.5s ease-in;
 }
 
 #webreacher-ssh-handler-separator {
-    position: relative;
-    margin-top: 11.5px;
-    margin-left: 30px;
-    width: 540px;
-    background-color: #E91E63;
-    height: 2px;    
-    display: inline-block;
+    position: relative !important;
+    margin-top: 11.5px !important;
+    margin-left: 40px !important;
+    line-height: 25px;
+    width: 570px !important;
+    background-color: #E91E63 !important;
+    height: 2px !important;  
+    border: 0 !important;
+    display: inline-block !important;
 }
 
 #webreacher-ssh-iframe {
-    position: relative;
-    width: 600px;
-    height: 375px;
-    z-index: 9002;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    position: fixed !important;
+    width: 650px !important;
+    height: 0px;
+    max-height: 375px !important;
+    z-index: 9002 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    transition: height 0.5s ease-in;
 }

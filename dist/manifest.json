@@ -34,7 +34,6 @@
   },
 
   "permissions": [
-    "contextMenus",
     "storage",
     "<all_urls>"
   ]

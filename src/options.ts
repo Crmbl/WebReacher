@@ -1,46 +1,28 @@
-// import * as $ from 'jquery';
+function save_options() {
+  var link = <HTMLInputElement> document.getElementById('webreacher-link');
+  console.log(link.value);
 
-// Saves options to chrome.storage.sync.
-// function save_options() {
-  // var color = $('#color').val();
-  // var likesColor = $('#like').prop('checked');
-  // chrome.storage.sync.set({
-  //   favoriteColor: color,
-  //   likesColor: likesColor
-  // }, function() {
-  //   // Update status to let user know options were saved.
-  //   var status = $('#status');
-  //   status.text('Options saved.');
-  //   setTimeout(function() {
-  //     status.text('');
-  //   }, 750);
-  // });
-// }
+  chrome.storage.sync.set({
+    'link': link.value
+  }, function() {
+    var status = document.getElementById('webreacher-status');
+    status.innerHTML = 'C\'est en place !';
+    setTimeout(function() {
+      status.innerHTML = '';
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
-// function restore_options() {
-  // Use default value color = 'red' and likesColor = true.
-  // chrome.storage.sync.get({
-  //   favoriteColor: 'red',
-  //   likesColor: true
-  // }, function(items: {favoriteColor, likesColor}) {
-  //   $('#color').val(items.favoriteColor);
-  //   $('#like').prop('checked', items.likesColor);
-  // });
-// }
+    }, 750);
+  });
+}
 
-// $('#save').click(save_options);
-// $(restore_options); // document.addEventListener('DOMContentLoaded', restore_options);
+function restore_options() {
+  chrome.storage.sync.get({
+    link: ''
+  }, function(items: {link}) {
+    var linkElement = <HTMLInputElement> document.getElementById('webreacher-link');
+    linkElement.value = items.link;
+  });
+}
 
-
-
-
-// 
-//   chrome.tabs.query(queryInfo, function(tabs) {
-//   });
-
-//   chrome.browserAction.setBadgeText({text: count.toString()});
-//   $('#countUp').click(()=>{
-//     chrome.browserAction.setBadgeText({text: (++count).toString()});
-//   });
+document.getElementById('webreacher-save').addEventListener('click', save_options);
+restore_options();
+document.addEventListener('DOMContentLoaded', restore_options);

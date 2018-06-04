@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        // options: path.join(__dirname, '../src/options.ts'),
+        options: path.join(__dirname, '../src/options.ts'),
         background: path.join(__dirname, '../src/background.ts'),
         content_script: path.join(__dirname, '../src/content_script.ts')
     },
@@ -28,9 +28,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
-    },
-    plugins: [
-        // exclude locale files in moment
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    ]
+    }
 };
