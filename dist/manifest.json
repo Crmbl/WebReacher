@@ -9,7 +9,7 @@
       "48": "icon.png"
    },
   "description": "Chrome Extension for SSH use",
-  "version": "3.0",
+  "version": "3.5",
 
   "options_ui": {
     "page": "options.html",
@@ -23,13 +23,13 @@
   "content_scripts": [
       {
           "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"],
+          "js": ["js/content_script.js"],
           "css": ["css/global.css"]
       }
   ],
 
   "background": {
-    "scripts": ["js/vendor.js", "js/background.js"],
+    "scripts": ["js/background.js"],
     "persistent": true
   },
 

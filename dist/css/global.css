@@ -1,54 +1,58 @@
 #webreacher-ssh {
     position: fixed !important;
-    width: 650px !important;
+    width: 650px;
     height: 400px;
-    opacity: 1 !important;
-    z-index: 9001 !important;
-    top: 0px !important;
-    background-color: black !important;
-    border-bottom-left-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
-    transition: height 0.5s ease-out;
-    padding: 5px;
+    top: 0px;
+    z-index: 9001;
+    background-color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: top 0.5s ease-out;
+}
+
+#webreacher-ssh-iframe {
+    position: fixed !important;
+    width: 640px;
+    height: 365px;
+
+    top: 5px;
+    z-index: 9002;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-left: 5px !important;
+    border: 0 !important;
+    transition: top 0.5s ease-out;
 }
 
 #webreacher-ssh-handler {
     position: fixed !important;
     top: 375px;
-    background-color: black !important;
-    width: 650px !important;
-    height: 25px !important;
-    opacity: 1 !important;
-    z-index: 9002 !important;
+    width: 650px;
+    height: 25px;
+
+    z-index: 9002;
     cursor: pointer !important;
     padding: 0 !important;
     margin: 0 !important;
-    margin-left: -5px !important;
-    border-bottom-left-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: black;
     transition: top 0.5s ease-out;
 }
 
 #webreacher-ssh-handler-separator {
     position: relative !important;
+    width: 570px;
+    height: 2px;  
+    
+    margin: 0 !important;
+    padding: 0 !important;
     margin-top: 11.5px !important;
     margin-left: 40px !important;
-    line-height: 25px;
-    width: 570px !important;
-    background-color: #E91E63 !important;
-    height: 2px !important;  
+    line-height: 25px !important;
+    background-color: #E91E63;
     border: 0 !important;
     display: inline-block !important;
-}
-
-#webreacher-ssh-iframe {
-    position: fixed !important;
-    top: 5px;
-    width: 640px !important;
-    height: 365px !important;
-    z-index: 9002 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: 0 !important;
-    transition: top 0.5s ease-out;
 }

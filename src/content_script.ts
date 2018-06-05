@@ -19,7 +19,8 @@ function createWebReacherDivs() {
     document.body.appendChild(ssh);
 
     chrome.storage.sync.get('link', function(response) {
-        if (response.link != "" && response.link.indexOf("https") == -1)
+        if (response.link == "" || response.link == undefined) return;
+        if (response.link.indexOf("https") == -1)
             response.link = response.link.replace("http", "https");
 
         var iframe = document.createElement("iframe");
@@ -66,12 +67,12 @@ function toggleTerminal() {
 
     if (iframe.style.top == "-365px") {
         iframe.style.top = "5px";
-        ssh.style.height = "400px";
+        ssh.style.top = "0px";
         handler.style.top = "375px";
     }
     else {
         iframe.style.top = "-365px";
-        ssh.style.height = "25px"
+        ssh.style.top = "-400px";
         handler.style.top = "0px";
     }
 }
